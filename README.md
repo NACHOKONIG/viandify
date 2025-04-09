@@ -50,9 +50,9 @@
     section {
       padding: 6rem 2rem 4rem 2rem;
     }
-    /* Sección Inicio (Hero) */
+    /* Sección Inicio (Hero) con imagen de fondo */
     .hero {
-      background: url('https://via.placeholder.com/1600x600') no-repeat center center/cover;
+      background: url('images/viandas-inicio.jpg') no-repeat center center/cover;
       height: 80vh;
       display: flex;
       flex-direction: column;
@@ -288,4 +288,3 @@
   </script>
 </body>
 </html>
-
