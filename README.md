@@ -1,2 +1,291 @@
 # viandify
 codigo para mi proyecto de viandas saludables
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viandify - Pedidos Anticipados de Viandas Saludables</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    header {
+      background: #f76c6c; /* Color acento similar a lo que te gusta */
+      color: #fff;
+      padding: 1rem 2rem;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+    }
+    header nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+    header nav ul li {
+      margin: 0 1rem;
+    }
+    header nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    header nav ul li a:hover {
+      color: #333;
+    }
+    /* Un espacio para compensar el header fijo */
+    .spacer {
+      height: 80px;
+    }
+    section {
+      padding: 6rem 2rem 4rem 2rem;
+    }
+    /* Sección Inicio (Hero) */
+    .hero {
+      background: url('https://via.placeholder.com/1600x600') no-repeat center center/cover;
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin-bottom: 2rem;
+    }
+    .hero a {
+      background: #fff;
+      color: #f76c6c;
+      padding: 0.8rem 2rem;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+    .hero a:hover {
+      background: #f1f1f1;
+    }
+    /* Títulos de sección */
+    .section-title {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      color: #f76c6c;
+    }
+    /* Sección Menú */
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    .menu-item {
+      border: 1px solid #ddd;
+      padding: 1rem;
+      border-radius: 5px;
+      background: #fff;
+      transition: transform 0.3s ease;
+    }
+    .menu-item:hover {
+      transform: scale(1.02);
+    }
+    .menu-item h3 {
+      color: #f76c6c;
+      margin-bottom: 0.5rem;
+    }
+    .menu-item p {
+      font-size: 0.9rem;
+    }
+    /* Sección Pedidos: Formulario */
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    form label {
+      margin-bottom: 0.3rem;
+      display: block;
+      font-weight: bold;
+    }
+    form input, form select, form textarea, form button {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form button {
+      background: #f76c6c;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    form button:hover {
+      background: #e55a5a;
+    }
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#menu">Menú</a></li>
+        <li><a href="#funciona">Cómo Funciona</a></li>
+        <li><a href="#pedidos">Pedidos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="spacer"></div>
+  <!-- Sección Inicio -->
+  <section id="inicio" class="hero">
+    <h1>Bienvenido a Viandify</h1>
+    <p>Disfrutá de viandas saludables y deliciosas, preparadas con anticipación para que no te falte energía durante el día. Ideal para empresas y particulares.</p>
+    <a href="#pedidos">Realizar Pedido</a>
+  </section>
+
+  <!-- Sección Menú -->
+  <section id="menu">
+    <h2 class="section-title">Menú</h2>
+    <div class="menu-grid">
+      <!-- Ejemplos de productos; agregá o editá según tu menú completo -->
+      <div class="menu-item">
+        <h3>Rabas</h3>
+        <p>Precio: $11.000</p>
+      </div>
+      <div class="menu-item">
+        <h3>Papas con cheddar y verdeo</h3>
+        <p>Precio: $7.000</p>
+      </div>
+      <div class="menu-item">
+        <h3>Papas</h3>
+        <p>Precio: $5.000</p>
+      </div>
+      <div class="menu-item">
+        <h3>Bastones de muzarella</h3>
+        <p>Precio: $8.000</p>
+      </div>
+      <div class="menu-item">
+        <h3>Milanesa con puré</h3>
+        <p>Precio: $9.500</p>
+      </div>
+      <div class="menu-item">
+        <h3>Pastas con fileto</h3>
+        <p>Precio: $9.000 <br>(Salsa Fileto: $2.700 adicional)</p>
+      </div>
+      <div class="menu-item">
+        <h3>Pastas con bolognesa</h3>
+        <p>Precio: $9.000 <br>(Salsa Bolognesa: $3.800 adicional)</p>
+      </div>
+      <!-- Agregar más productos por categoría -->
+    </div>
+  </section>
+
+  <!-- Sección Cómo Funciona -->
+  <section id="funciona">
+    <h2 class="section-title">Cómo Funciona</h2>
+    <div style="max-width:800px; margin: 0 auto;">
+      <p>Viandify funciona con pedidos anticipados. Seleccioná tu vianda o plato favorito del menú, indicá la fecha de entrega y realizá tu pedido. Las viandas son preparadas de forma saludable y planificada, garantizando la máxima frescura y sabor.</p>
+      <p>Ideal para empresas: coordiná tus pedidos para tener comidas balanceadas a lo largo de la semana y sorprender a tu equipo.</p>
+    </div>
+  </section>
+
+  <!-- Sección Pedidos -->
+  <section id="pedidos">
+    <h2 class="section-title">Pedidos</h2>
+    <div style="max-width:800px; margin: 0 auto;">
+      <form action="#" method="post">
+        <label for="nombre">Nombre Completo:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+
+        <label for="fecha">Fecha de Pedido:</label>
+        <input type="date" id="fecha" name="fecha" required>
+
+        <label for="producto">Seleccioná el Producto:</label>
+        <select id="producto" name="producto" required>
+          <option value="">-- Elegí un producto --</option>
+          <option value="rabas">Rabas</option>
+          <option value="papas_cheddar">Papas con cheddar y verdeo</option>
+          <option value="papas">Papas</option>
+          <option value="bastones_muzarella">Bastones de muzarella</option>
+          <option value="milanesa_pure">Milanesa con puré</option>
+          <option value="pastas_fileto">Pastas con fileto</option>
+          <option value="pastas_bolognesa">Pastas con bolognesa</option>
+          <!-- Agregá más productos según corresponda -->
+        </select>
+
+        <label for="comentarios">Comentarios o Instrucciones:</label>
+        <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+
+        <button type="submit">Enviar Pedido</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Sección Contacto / Información -->
+  <section id="contacto">
+    <h2 class="section-title">Contacto / Información</h2>
+    <div style="max-width:800px; margin: 0 auto;">
+      <p>Para más información, contactanos a:</p>
+      <p>Email: <a href="mailto:contacto@viandify.com">contacto@viandify.com</a></p>
+      <p>Teléfono: +54 9 11 1234-5678</p>
+      <p>Síguenos en nuestras redes sociales:</p>
+      <p>
+        <a href="https://www.instagram.com/viandify" target="_blank">Instagram</a> |
+        <a href="https://www.facebook.com/viandify" target="_blank">Facebook</a>
+      </p>
+      <h3>Preguntas Frecuentes</h3>
+      <p><strong>¿Cómo realizo un pedido?</strong> Seleccioná un producto, elegí la fecha deseada y completá el formulario de pedido.</p>
+      <p><strong>¿Cuándo se entrega?</strong> Los pedidos son anticipados según la fecha seleccionada.</p>
+      <p><strong>¿Puedo modificar o cancelar mi pedido?</strong> Contactanos lo antes posible para gestionar modificaciones.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Viandify - Todos los derechos reservados</p>
+  </footer>
+
+  <script>
+    // JavaScript para smooth scrolling
+    const links = document.querySelectorAll('header nav ul li a');
+    links.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetID = this.getAttribute('href');
+        document.querySelector(targetID).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
